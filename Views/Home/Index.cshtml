@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MyCoins.Models.Coin>
+
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Metal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Denomination)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denomination)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
